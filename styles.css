@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', sans-serif !important;
+    overflow: hidden; /* Предотвращаем прокрутку страницы */
+    font-size: 30px; /* Устанавливаем размер шрифта */
+    color: white;
+    text-align: center; /* Выравниваем весь текст по центру */
+    overflow-y: scroll; /* Добавляем вертикальный скроллинг к элементу body */
+}
+
+video {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* Заполняем всю площадь видео */
+    z-index: -1; /* Помещаем видео под всем остальным контентом */
+}
+
+/* Стили для таблиц */
+table {
+    width: 80%;
+    margin: 0 auto; 
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.5); /* белый цвет с полупрозрачностью */
+    border-radius: 15px; /* радиус скругления углов */
+    color: black;
+}
+
+table, th, td {
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+th, td {
+    border: 1px solid rgba(255, 255, 255, 0);
+    padding: 8px;
+    text-align: left;
+    border-radius: 15px; /* радиус скругления углов */
+}
+
+/* Стили для кнопок */
+button {
+    padding: 10px 20px;
+    background-color: rgba(14, 59, 107); 
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 20px; /* радиус скругления углов */
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 20px; /* Устанавливаем размер шрифта в 16 пикселей */
+    color: white;
+    transition: background-color 0.3s; /* Плавный переход цвета при наведении */
+    
+}
+
+button:hover {
+    background-color:rgba(25, 102, 184);
+}
+
+button:active {
+    background-color:rgba(100, 149, 237);
+}
+
+/* Стили для форм */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], select {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: rgba(14, 59, 107); 
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px; /* радиус скругления углов */
+    font-size: 20px;
+    font-family: 'Comfortaa', sans-serif;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color:rgba(25, 102, 184);
+}
+input[type="submit"]:active {
+    background-color:rgba(100, 149, 237);
+}
+
+/* Стили для форм добавления и редактирования */
+#addForm, #editForm {
+    margin-top: 20px;
+}
+
+/* Стили для скрытия форм */
+#addForm[style="display: none;"], #editForm[style="display: none;"] {
+    display: none;
+}
+a {
+    display: inline-block; /* Делаем ссылки блочными элементами */
+    color: blue;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.5); /* Полупрозрачный белый фон */
+    padding: 5px 10px; /* Добавим немного отступа вокруг текста ссылки */
+    border-radius: 5px; /* Закруглим углы фона */
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color:rgba(135, 200, 224);
+}
+
+a:visited {
+    color: white;
+}
+
+a:active {
+    color: white;
+    background-color:rgba(181, 222, 238);
+}
+input[type="text"], input[type="email"], input[type="password"] {
+    /* Общие стили для всех полей ввода текста, email и пароля */
+    width: 200px; /* Ширина поля ввода */
+    padding: 10px; /* Отступ внутри поля ввода */
+    border: 1px solid #ccc; /* Обводка поля ввода */
+    border-radius: 5px; /* Скругление углов поля ввода */
+    font-size: 30px; /* Размер шрифта */
+    font-family: 'Comfortaa', sans-serif;
+    background-color:rgba(235, 228, 242, 0.9);
+    transition: background-color 0.3s;
+}
+input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover {
+    /* Стили для кнопок при наведении */
+    background-color: white; /* Изменяем цвет фона при наведении */
+}
+input:focus {
+    outline: none; /* Убираем рамку при фокусировке на поле ввода */
+}
+select {
+    /* Общие стили для всех выпадающих списков */
+    width: 200px; /* Ширина списка */
+    padding: 10px; /* Отступы вокруг текста в списке */
+    border: 1px solid #ccc; /* Граница списка */
+    border-radius: 15px; /* Скругление углов */
+    font-size: 26px; /* Размер шрифта */
+    background-color: white; /* Цвет фона списка */
+    font-family: 'Comfortaa', sans-serif;
+    background-color:rgba(235, 228, 242, 0.9);
+}
+select:hover {
+    background-color: white; /* Изменяем цвет фона при наведении */
+}
+
+select:focus {
+    outline: none; /* Убираем рамку при фокусировке на списке */
+}
+
+/* Стили для опций в выпадающем списке */
+option {
+    padding: 5px; /* Отступы вокруг текста опции */
+    font-size: 26px; /* Размер шрифта */
+}
+.notification {
+    display: none !important;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 5px;
+    z-index: 1000;
+}
+.links-container {
+    display: flex;
+    flex-direction: column; /* Это свойство располагает элементы вертикально */
+    align-items: center; /* Центрирует элементы по вертикали */
+}
+
+.links-container a {
+    display: block; /* Превращает ссылки в блочные элементы */
+    margin-bottom: 20px; /* Добавляет пространство между ссылками */
+    width: 40%;
+
+}
+
+.error-message {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(241, 118, 158, 0.6);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+}
+.error-message.fade-out {
+    opacity: 0;
+}
